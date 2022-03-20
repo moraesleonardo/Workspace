@@ -1,0 +1,23 @@
+﻿
+
+funcionarios=list()
+func=list() #um único funcionario(coleção)
+
+somaSalarial=0
+
+qtde=int(input("Informe a quantidade de funcionários:"))
+
+for pos in range(qtde):
+    
+    func.append(input("Nome:"))
+    func.append(float(input("Salario:")))
+    
+    funcionarios.append(func[:])
+    func.clear()
+    
+    somaSalarial=somaSalarial + float(funcionarios[pos][1])
+    print(f"O funcionário {funcionarios[pos][0]} ganha R$ {funcionarios[pos][1]}")
+    
+print(f"Soma salarial: {somaSalarial}")   
+print(func)
+print(funcionarios)
