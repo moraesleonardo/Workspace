@@ -1,0 +1,18 @@
+﻿valorTotal = 0
+
+qtdePessoas = int(input("quantidade de pessoas: "))
+numeroMesa = input("número da mesa: ")
+qtdeProdutos = int(input("quantidade de produtos: "))
+taxa = float(input("taxa: "))
+
+for produto in range(qtdeProdutos):
+    qtde = int(input("quantidade: "))
+    valor = float(input("valor: "))
+
+    valorTotal = valorTotal + (qtde * valor)
+
+valorTotal = valorTotal + (valorTotal * taxa / 100)
+
+valorIndividual = valorTotal / qtdePessoas
+
+print("Cada uma das", qtdePessoas,"pessoas da mesa",numeroMesa,"deve pagar R$",valorIndividual,"de conta")
